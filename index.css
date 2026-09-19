@@ -1,0 +1,154 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #000000;
+    text-align: center;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+h2 {
+    display: block;
+}
+.container {
+    width: min(600px, 100%);
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #1F2937;
+    display: flex;
+    flex-direction: column;
+}
+.header-container,
+.color-container {
+    width: 100%;
+}
+
+/* to display the 3 elements in a row, header gets display: flex, align-items: center, and a gap between them */
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    gap: 1rem;
+    align-items: center;
+}
+.color-picker {
+    aspect-ratio: 5 / 4;
+    width: auto;
+    justify-self: center;
+    padding: 3px;
+    background: white;
+}
+.color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+.color-picker::-webkit-color-swatch {
+    border: 0;
+    border-radius: 3px;
+}
+.color-select,
+.color-scheme,
+.get-color-scheme,
+.color-picker,
+.container {
+    border-radius: 10px;
+}
+
+.color-select,
+.get-color-scheme {
+    width: 100%;
+}
+
+.color-select,
+.color-picker,
+.get-color-scheme {
+    min-height: 40px;
+    border: 1px solid rgb(198, 184, 184);
+}
+.color-select {
+    padding: 0 0.5rem;
+}
+.get-color-scheme {
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+}
+
+.copy-hex {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    padding: 0.25rem 0.5rem;
+    text-transform: uppercase;
+}
+.copy-hex:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease;
+}
+.copy-hex:disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+/* container for the colour columns */
+.color-container {
+    flex: 1;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+.color-scheme-wrapper,
+.hex-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+} 
+
+.hex-wrapper {
+    font-size: 0.75rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.hex-wrapper > div {
+    padding: 0.5rem 0.25rem;
+}
+.hex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+footer {
+    padding: 1rem;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top: 2px solid rgb(198, 184, 184);
+    border-bottom: 2px solid rgb(198, 184, 184);
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    padding: 0.25rem 0.5rem;
+}

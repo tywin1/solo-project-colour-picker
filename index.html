@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Colour Picker</title>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="container">
+        <div class="header-container">
+        <header>
+        <input type="color" class="color-picker" id="colorPicker" value="#F55A5A">
+        <select id="colorModeSelect" class="color-select">
+        </select>
+        <button class="get-color-scheme" id="getColorScheme">get color scheme</button>
+        </header>
+        </div>
+
+        <main class="color-container">
+            <div id="colorSchemeWrapper" class="color-scheme-wrapper">
+            </div>
+            <div id="hexWrapper" class="hex-wrapper">
+            </div>
+        </main>
+
+    </div>
+        <footer>Built by <a href="https://github.com/tywin1" target="_blank" rel="noopener noreferrer">Ramon E</a></footer>
+
+
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
